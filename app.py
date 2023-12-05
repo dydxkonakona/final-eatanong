@@ -53,7 +53,8 @@ def make_prediction(image_bytes):
     return class_name, description, confidence
 
 # Streamlit UI setup with designs
-st.title("Food Image Classifier")
+st.image("logo.png", use_column_width=True)
+st.title("Filipino Food Image Classifier")
 
 # Set background color with custom CSS
 st.markdown(
@@ -68,12 +69,13 @@ st.markdown(
 )
 
 # Display gif
-#st.image("https://ecard.enter-media.org/upload/iblock/484/4842b4081cf17f58af869f76d9f7b122.gif", use_column_width=True)  # Replace "your_background.gif" with the actual file path or URL
+# st.image("main-gif.gif", use_column_width=True)  # Replace "your_background.gif" with the actual file path or URL
 
 # Additional content
 st.markdown(
-    "This is a simple web app that classifies food images into different categories. Upload an image to get started."
+    "Welcome to Eatanong Heartwise, your essential companion for exploring Filipino cuisine! This innovative app helps determine if the food you're about to enjoy is generally heart-healthy or heart-detrimental. It combines advanced image recognition technology with a curated collection of hard-coded descriptions, enabling you to effortlessly predict and discover Filipino food classes."
 )
+st.markdown("Eatanong Heartwise is designed to assist in making heart-conscious dietary choices. With this app, users are empowered to make informed decisions about their diet while balancing their love for Filipino cuisine.")
 
 # File uploader with design
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"], key="fileuploader")
